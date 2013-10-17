@@ -33,9 +33,9 @@
 
         <com.zhan_dui.custom.MinusTextView
             android:id="@+id/content"
-            android:lineSpacingExtra="5dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
             android:paddingLeft="@dimen/content_padding_right"
             android:paddingRight="@dimen/content_padding_left"
             android:textColor="@color/content_text_color"
