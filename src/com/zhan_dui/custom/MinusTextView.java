@@ -11,7 +11,6 @@ import android.widget.TextView;
 public class MinusTextView extends TextView {
 
 	private static int width;
-	private int firstTimeHeight;
 
 	{
 		WindowManager wm = (WindowManager) getContext().getSystemService(
@@ -28,13 +27,8 @@ public class MinusTextView extends TextView {
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 		int widthSize = getMeasuredWidth();
-		int heightSize = getMeasuredHeight() - dpToPx(30);
+		int heightSize = getMeasuredHeight();
 
-		if (firstTimeHeight == 0) {
-			firstTimeHeight = heightSize;
-		} else {
-			heightSize = firstTimeHeight;
-		}
 		if (heightSize > width * 0.8) {
 			heightSize = (int) (width * 0.8);
 		}
